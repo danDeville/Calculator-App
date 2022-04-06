@@ -17,6 +17,16 @@ body {
   background-color: hsl(222, 26%, 31%);
 }
 
+body.active-theme-1 {
+  background-color: red;
+}
+
+
+body.active-theme-2 {
+  background-color: green;
+}
+
+
 h1 {
   font-size: 1.25rem;
   text-align: left;
@@ -29,19 +39,63 @@ h1 {
 
 .modos {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
+}
+
+.modos-derecha {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .modos p {
   margin: 0 5px;
-  color: #fff
+  color: #fff;
+  cursor: pointer
+}
+
+.modos-control {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .modos-control p {
-  float: right;
-  margin-right: 70px;
-  color: #fff
+  margin-right: 16px;
+  color: #fff;
+  cursor: pointer
 }
+
+.modos-control_riel {
+  position: relative;
+  width: 60px;
+  height: 10px;
+  background-color: hsl(224, 36%, 15%);
+  border-radius: 30px
+}
+
+
+/* .modos-control p::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -100px;
+  width: 60px;
+  height: 13px;
+  background-color: grey;
+  border-radius: 30px
+}
+
+.modos-control p::before {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  top: 1px;
+  right: -52px;
+  width: 11px;
+  height: 11px;
+  background-color: red;
+  border-radius: 30px;
+} */
 
 .pantalla-calculadora {
   width: 450px;
@@ -53,6 +107,8 @@ h1 {
   margin: 10px 0;
   text-align: end;
   font-size: 32px;
+  background-color: hsl(224, 36%, 15%);
+  color: #fff;
 }
 
 .botones {
@@ -71,6 +127,7 @@ h1 {
   border: 0;
   border-radius: 5px;
   box-shadow: 0px 3px 0px 0px hsl(224deg 28% 35%);
+  /* font-size: 32px; */
   outline: none;
   cursor: pointer
 }
@@ -81,14 +138,21 @@ h1 {
 
 .botones-calculadora button.reiniciar,  button.igual{
   width: 200px;
+  font-size: 16px;
   color: #fff
 }
 
 .reiniciar, .borrar {
   background-color: hsl(225, 21%, 49%);
   box-shadow: 0px 3px 0px 0px hsl(224deg 28% 35%);
+  font-size: 16px;
   color: #fff
 }
+
+.borrar {
+  font-size: 16px;
+}
+
 
 .igual {
   background-color: hsl(6, 63%, 50%);
