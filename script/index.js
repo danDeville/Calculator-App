@@ -1,24 +1,28 @@
 const borrar = () => {
-  var value = document.getElementById('pantalla').value
-  document.getElementById('pantalla').value = value.substr(0, value.length - 1)
+  var screen = document.getElementById('pantalla').value
+  document.getElementById('pantalla').value = screen.substr(0, value.length - 1)
 }
 
-let two = document.getElementById('two')
-two.addEventListener('click',function(){
-  let body = document.querySelector('body')
-  body.classList.add('active-theme-1')
+let layout = document.querySelector('body')
+let handleStyle = document.getElementById('modos-control_indicador')
+
+let mediumMode = document.getElementById('medium-mode')
+mediumMode.addEventListener('click', () => {
+  layout.classList.add('active-theme-2')
+  layout.classList.remove('active-theme-3')
+  handleStyle.style.left = '40%'
 })
 
-let one = document.getElementById('one')
-one.addEventListener('click',function(){
-  let body = document.querySelector('body')
-  body.classList.remove('active-theme-1')
-  body.classList.remove('active-theme-2')
+let firstMode = document.getElementById('first-mode')
+firstMode.addEventListener('click', () => {
+  layout.classList.remove('active-theme-2')
+  layout.classList.remove('active-theme-3')
+  handleStyle.style.left = '0%'
 })
 
-let three = document.getElementById('three')
-three.addEventListener('click',function(){
-  let body = document.querySelector('body')
-  body.classList.add('active-theme-2')
-  body.classList.remove('active-theme-1')
+let lastMode = document.getElementById('last-mode')
+lastMode.addEventListener('click', () => {
+  layout.classList.add('active-theme-3')
+  layout.classList.remove('active-theme-2')
+  handleStyle.style.left = '80%'
 })

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,18 +18,18 @@
           <h1>Calc</h1>
 
           <section class="modos-derecha">
-            <p id="one">1</p>
-            <p id="two">2</p>
-            <p id="three">3</p>
+            <p id="first-mode">1</p>
+            <p id="medium-mode">2</p>
+            <p id="last-mode">3</p>
           </section>
         </div>
 
         <div class="modos-control">
           <p>Theme</p>
-          <div class="modos-control_riel"></div>
-          <div class="modos-control_indicador"></div>
+          <div class="modos-control_riel">
+            <div id="modos-control_indicador"></div>
+          </div>
         </div>
-
       </div>
 
       <div class="pantalla-calculadora">
@@ -43,55 +43,75 @@
           <button class="numero" onclick="document.calc.text.value +='7'">
             7
           </button>
+
           <button class="numero" onclick="document.calc.text.value +='8'">
             8
           </button>
+
           <button class="numero" onclick="document.calc.text.value +='9'">
             9
           </button>
+
           <button class="borrar" onclick="borrar()">
             DEL
           </button>
+
           <button class="numero" onclick="document.calc.text.value +='4'">
             4
           </button>
+
           <button class="numero" onclick="document.calc.text.value +='5'">
             5
           </button>
+
           <button class="numero" onclick="document.calc.text.value +='6'">
             6
           </button>
+
           <button class="numero" onclick="document.calc.text.value +='+'">
             +
           </button>
+
           <button class="numero" onclick="document.calc.text.value +='1'">
             1
           </button>
+
           <button class="numero" onclick="document.calc.text.value +='2'">
             2
           </button>
+
           <button class="numero" onclick="document.calc.text.value +='3'">
             3
           </button>
+
           <button class="numero" onclick="document.calc.text.value +='-'">
             -
           </button>
+
           <button class="numero" onclick="document.calc.text.value +='.'">
             .
           </button>
+
           <button class="numero" onclick="document.calc.text.value +='0'">
             0
           </button>
+
           <button class="numero" onclick="document.calc.text.value +='/'">
             /
           </button>
+
           <button class="numero" onclick="document.calc.text.value +='*'">
             x
           </button>
+
           <button class="reiniciar" onclick="document.calc.text.value =''">
             RESET
           </button>
-          <button class="igual" onclick="document.calc.text.value = eval(calc.text.value)">
+
+          <button
+            class="igual"
+            onclick="document.calc.text.value = eval(calc.text.value)"
+          >
             =
           </button>
         </div>
