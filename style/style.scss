@@ -1,0 +1,288 @@
+@use 'theme-1';
+@use 'theme-2';
+@use 'theme-3';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Spartan', sans-serif;
+  font-weight: 700;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  height: 100vh;
+  overflow-y: auto;
+  margin: 0 auto;
+  padding: 16px;
+  background-color: theme-1.$main-bg-1-color;
+
+  @media (min-width: 768px) {
+    justify-content: center;
+    padding: 0;
+  }
+}
+
+/* Theme_2 */
+body.active-theme-2 {
+  background-color: theme-2.$main-bg-2-color;
+
+  h1 {
+    color: theme-2.$text-2-color-1;
+  }
+
+  .modos p {
+    color: theme-2.$text-2-color-1;
+  }
+
+  .modos-control p  {
+    color: theme-2.$text-2-color-1;
+  }
+
+  .modos-control_riel {
+    background-color: theme-2.$toggle-bg-2-color;
+  }
+
+  #modos-control_indicador {
+    background-color: theme-2.$key-org-bg-2-color;
+    box-shadow: 2px 1px 2px 0px theme-2.$key-org-sh-2-color
+  }
+
+  body.active-theme-2 #modos-control_indicador {
+  background-color: theme-2.$key-org-bg-2-color;
+  box-shadow: 2px 1px 2px 0px theme-2.$key-org-sh-2-color
+}
+
+  #pantalla {
+    background-color: theme-2.$screen-bg-2-color;
+    color: theme-2.$text-2-color-1
+  }
+
+  .botones {
+    background-color: theme-2.$toggle-bg-2-color;
+  }
+
+  .botones .numero {
+    box-shadow: 0px 3px 0px 0px theme-2.$key-yel-sh-2-color;
+    color: theme-2.$text-2-color-1
+  }
+
+  .reiniciar, .borrar {
+    background-color: theme-2.$key-bg-2-color;
+    box-shadow: 0px 3px 0px 0px theme-2.$key-sh-2-color;
+  }
+
+  .borrar {
+    background-color: theme-2.$key-bg-2-color;
+    box-shadow: 0px 3px 0px 0px theme-2.$key-sh-2-color;
+  }
+
+  .igual {
+    background-color: theme-2.$key-org-bg-2-color;
+    box-shadow: 0px 3px 0px 0px theme-2.$key-org-sh-2-color;
+  }
+}
+
+/* Theme_3 */
+body.active-theme-3 {
+  background-color: theme-3.$main-bg-3-color;
+
+  h1 {
+    color: theme-3.$text-3-color-1;
+  }
+
+  .modos p {
+    color: theme-3.$text-3-color-1;
+  }
+
+  .modos-control p  {
+    color: theme-3.$text-3-color-1;
+  }
+
+  .modos-control_riel {
+    background-color: theme-3.$toggle-bg-3-color;
+  }
+
+  #modos-control_indicador {
+    background-color: theme-3.$key-cyan-bg-3-color;
+    box-shadow: 2px 1px 2px 0px theme-3.$key-cyan-sh-3-color;
+  }
+
+  #pantalla {
+    background-color: theme-3.$toggle-bg-3-color;
+    color: theme-3.$text-3-color-1
+  }
+
+  .botones {
+    background-color: theme-3.$toggle-bg-3-color;
+  }
+
+  .botones .numero {
+    background-color: theme-3.$key-mag-bg-3-color;
+    box-shadow: 0px 3px 0px 0px theme-3.$key-mag-sh-3-color;
+    color: theme-3.$text-3-color-1
+  }
+
+  .reiniciar, .borrar {
+    background-color: theme-3.$key-bg-3-color;
+    box-shadow: 0px 3px 0px 0px theme-3.$key-sh-3-color;
+  }
+
+  .borrar {
+    background-color: theme-3.$key-bg-3-color;
+    box-shadow: 0px 3px 0px 0px theme-3.$key-sh-3-color;
+  }
+
+  .igual {
+    background-color: theme-3.$key-cyan-bg-3-color;
+    box-shadow: 0px 3px 0px 0px theme-3.$key-cyan-sh-3-color;
+    color: theme-3.$text-3-color-2
+  }
+}
+
+// layout
+.contenedor-calculadora {
+  width: 285px;
+  margin-top: 60px;
+
+  @media (min-width: 768px) {
+    width: 450px;
+    margin-top: 0;
+  }
+}
+
+h1 {
+  font-size: 1.25rem;
+  text-align: left;
+  color: theme-1.$text-white-color
+}
+
+.modos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modos-derecha {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modos p {
+  margin: 0 5px;
+  color: theme-1.$text-white-color;
+  cursor: pointer
+}
+
+.modos-control {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.modos-control p {
+  margin-right: 16px;
+  color: theme-1.$text-white-color;
+  cursor: pointer
+}
+
+.modos-control_riel {
+  position: relative;
+  width: 60px;
+  height: 16px;
+  background-color: theme-1.$toggle-bg-1-color;
+  border-radius: 30px;
+  padding: 4px
+}
+
+#modos-control_indicador {
+  z-index: 1;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background-color: theme-1.$key-red-bg-1-color;
+  border-radius: 30px;
+  box-shadow: 2px 1px 2px 0px theme-1.$key-red-sh-1-color;
+}
+
+.pantalla-calculadora {
+  width: 100%;
+}
+
+#pantalla {
+  width: 100%;
+  height: 100px;
+  padding: 0 20px;
+  margin: 10px 0;
+  text-align: end;
+  font-size: 32px;
+  background-color: theme-1.$screen-bg-1-color;
+  border: none;
+  border-radius: 8px;
+  color: theme-1.$text-white-color
+}
+
+.botones {
+  display: flex;
+  flex-flow: wrap;
+  width: 100%;
+  padding: 10px 5px;
+  margin: 8px 0;
+  background-color: theme-1.$toggle-bg-1-color;
+  border-radius: 8px;
+}
+
+.botones-calculadora button {
+  width: 48px;
+  padding: 8px;
+  margin: 10px 10px;
+  border: 0;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+    width: 90px;
+    padding: 15px;
+  }
+}
+
+.botones .numero {
+  box-shadow: 0px 3px 0px 0px theme-1.$key-org-sh-1-color;
+  font-size: 32px;
+  color: theme-1.$text-1-color-1;
+}
+
+.botones-calculadora button.reiniciar,  button.igual {
+  width: 117px;
+  font-size: 16px;
+  color: theme-1.$text-white-color;
+
+  @media (min-width: 768px) {
+    width: 200px;
+  }
+}
+
+.reiniciar, .borrar {
+  background-color: theme-1.$key-bg-1-color;
+  box-shadow: 0px 3px 0px 0px theme-1.$key-sh-1-color;
+  font-size: 16px;
+  color: theme-1.$text-white-color
+}
+
+.borrar {
+  font-size: 16px;
+}
+
+.igual {
+  background-color: theme-1.$key-red-bg-1-color;
+  box-shadow: 0px 3px 0px 0px theme-1.$key-red-sh-1-color;
+}
+
