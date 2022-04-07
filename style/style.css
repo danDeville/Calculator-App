@@ -137,6 +137,7 @@ body.active-theme-3 .igual {
 h1 {
   font-size: 1.25rem;
   text-align: left;
+  text-transform: uppercase;
   color: hsl(0deg, 0%, 100%);
 }
 
@@ -165,6 +166,7 @@ h1 {
 .modos-control p {
   margin-right: 16px;
   color: hsl(0deg, 0%, 100%);
+  text-transform: uppercase;
   cursor: pointer;
 }
 

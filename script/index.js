@@ -1,6 +1,6 @@
 const borrar = () => {
   var screen = document.getElementById('pantalla').value
-  document.getElementById('pantalla').value = screen.substr(0, value.length - 1)
+  document.getElementById('pantalla').value = screen.substr(0, screen.length - 1)
 }
 
 let layout = document.querySelector('body')
