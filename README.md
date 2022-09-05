@@ -2,7 +2,7 @@
 
 _Calculadora funcional con diferentes temas y paletas de colores._
 
-Proyecto Frontend Mentor el cual consta de una aplicación de calculadoras que pone a prueba habilidades de CSS y JS.
+Proyecto Frontend Mentor el cual consta de una aplicación de calculadora que pone a prueba habilidades de CSS y JS.
 
 Sus usuarios deberían poder:
 - Vea cómo se ajusta el tamaño de los elementos según el tamaño de la pantalla de su dispositivo
